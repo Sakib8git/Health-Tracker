@@ -7,6 +7,7 @@ import BrowseHabits from "../Pages/BrowseHabits/BrowseHabits";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "../Main/PrivateRoute";
+import NotFound from "../Components/404/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -46,5 +47,9 @@ export const router = createBrowserRouter([
         Component: Register,
       },
     ],
+  },
+  {
+    path: "/*",
+    Component: NotFound,
   },
 ]);

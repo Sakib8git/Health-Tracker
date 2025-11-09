@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { AuthContext } from "../../AuthContext/AuthContext";
 
 const Register = () => {
-  const { createWithEmail, signInWithGoogle, updateUserProfile, logOut } = useContext(AuthContext);
+  const { createWithEmail, signInWithGoogle, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const [name, setName] = useState("");
@@ -62,18 +62,7 @@ const Register = () => {
         }
       }
 
-      // log out then navigate to login (as requested)
-      if (typeof logOut === "function") {
-        try {
-          await logOut();
-        } catch (logoutErr) {
-          console.error("logout after register failed:", logoutErr);
-          // even if logout fails, still navigate to login
-        }
-      } else {
-        console.warn("logOut is not available on AuthContext");
-      }
-
+      // redirect to login (or home) after register
       navigate("/login");
     } catch (err) {
       console.error("register error:", err);
