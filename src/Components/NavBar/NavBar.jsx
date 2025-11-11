@@ -1,15 +1,13 @@
 import { Link, NavLink } from "react-router";
-import styled from "styled-components";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { toast } from "react-toastify";
 import { AuthContext } from "../../AuthContext/AuthContext";
 import { FaUserEdit } from "react-icons/fa";
-import { updateProfile } from "firebase/auth";
-import { auth } from "../../Firebase/firebase";
 import Loader from "../Loader/Loader";
+import "../../App.css";
 
 const NavBar = () => {
-  const { user, logOut, refreshNavUser, loading } = useContext(AuthContext);
+  const { user, logOut, loading   } = useContext(AuthContext);
 
   const signOutUser = async () => {
     try {
@@ -65,7 +63,7 @@ const NavBar = () => {
             </ul>
           </div>
 
-          <Link to="/" className=" text-2xl  text-green-700 font-bold">
+          <Link to="/" className="text-2xl text-green-700 font-bold">
             Habit-Tracker
           </Link>
         </div>
@@ -97,23 +95,17 @@ const NavBar = () => {
           {loading ? (
             <Loader />
           ) : !user ? (
-            <div className="flex gap-2 items-center">
-              <StyledWrapper>
-                <div className="flex gap-4">
-                  
-                 <Link to="/login">
-                  <button >
-                    <span>Login</span>
-                  </button>
-                </Link>
-                <Link to="/register">
-                  <button>
-                    <span>SIgnup</span>
-                  </button>
-                </Link> 
-                </div>
-                
-              </StyledWrapper>
+            <div className="flex gap-4">
+              <Link to="/login">
+                <button className="login-button">
+                  <span>Login</span>
+                </button>
+              </Link>
+              <Link to="/register">
+                <button className="login-button">
+                  <span>Signup</span>
+                </button>
+              </Link>
             </div>
           ) : (
             <div className="dropdown dropdown-end">
@@ -140,13 +132,13 @@ const NavBar = () => {
                 <li className="text-sm font-bold">{user.displayName}</li>
                 <li className="text-xs mb-2">{user.email}</li>
                 <li>
-                  <label
-                    htmlFor="update-profile-modal"
+                  <Link
+                    to="/update-profile"
                     className="flex items-center gap-2 cursor-pointer"
                   >
                     <FaUserEdit className="text-lg text-primary" />
                     Update Profile
-                  </label>
+                  </Link>
                 </li>
                 <li>
                   <button
@@ -161,136 +153,8 @@ const NavBar = () => {
           )}
         </div>
       </div>
-
-      {/* ✅ Modal */}
-      {user && (
-        <UpdateProfileModal user={user} refreshNavUser={refreshNavUser} />
-      )}
     </>
   );
 };
 
 export default NavBar;
-
-// ✅ Styled login button wrapper
-const StyledWrapper = styled.div`
-  button {
-    outline: none;
-    cursor: pointer;
-    border: none;
-    padding: 0.5rem 1.5rem;
-    margin: 0;
-    font-family: inherit;
-    font-size: inherit;
-    position: relative;
-    display: inline-block;
-    letter-spacing: 0.05rem;
-    font-weight: 700;
-    font-size: 15px;
-    border-radius: 500px;
-    overflow: hidden;
-    background: #66ff66;
-    color: ghostwhite;
-  }
-
-  button span {
-    position: relative;
-    z-index: 10;
-    transition: color 0.4s;
-  }
-
-  button:hover span {
-    color: black;
-  }
-
-  button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -10%;
-    width: 120%;
-    height: 100%;
-    background: #000;
-    transform: skew(30deg);
-    transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
-    z-index: 0;
-  }
-
-  button:hover::before {
-    transform: translate3d(100%, 0, 0);
-  }
-`;
-
-// ✅ Modal Component
-const UpdateProfileModal = ({ user, refreshNavUser }) => {
-  const [name, setName] = useState(user?.displayName || "");
-  const [photoURL, setPhotoURL] = useState(user?.photoURL || "");
-
-  const handleUpdate = async () => {
-    try {
-      await updateProfile(auth.currentUser, { displayName: name, photoURL });
-      await auth.currentUser.reload();
-      const updatedUser = auth.currentUser;
-      refreshNavUser(updatedUser);
-      toast.success("Profile updated");
-      document.getElementById("update-profile-modal").checked = false;
-    } catch (err) {
-      toast.error(err.message);
-    }
-  };
-
-  return (
-    <>
-      {/* daisy khala */}
-      <input
-        type="checkbox"
-        id="update-profile-modal"
-        className="modal-toggle"
-      />
-      <div className="modal">
-        <div className="modal-box">
-          <h3 className="font-bold text-lg mb-4">Update Profile</h3>
-
-          <div className="form-control mb-3">
-            <label className="label">Name</label>
-            <input
-              type="text"
-              className="input input-bordered"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
-
-          <div className="form-control mb-3">
-            <label className="label">Email</label>
-            <input
-              type="email"
-              className="input input-bordered"
-              value={user?.email}
-              disabled
-            />
-          </div>
-
-          <div className="form-control mb-4">
-            <label className="label">Photo URL</label>
-            <input
-              type="text"
-              className="input input-bordered"
-              value={photoURL}
-              onChange={(e) => setPhotoURL(e.target.value)}
-            />
-          </div>
-
-          <div className="modal-action">
-            <label htmlFor="update-profile-modal" className="btn btn-outline">
-              Close
-            </label>
-            <button onClick={handleUpdate} className="btn btn-primary">
-              Update
-            </button>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-};

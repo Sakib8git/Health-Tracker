@@ -10,6 +10,7 @@ import PrivateRoute from "../Main/PrivateRoute";
 import NotFound from "../Components/404/NotFound";
 import HabitDetails from "../Pages/HabitDetails/HabitDetails"; // ✅ NEW IMPORT
 import UpdateHabit from "../Pages/UpdateHabit/UpdateHabit";
+import UpdateProfile from "../Pages/UpdateUser/UpdateProfile";
 
 export const router = createBrowserRouter([
   {
@@ -63,6 +64,15 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <HabitDetails />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/update-profile",
+
+        element: (
+          <PrivateRoute>
+            <UpdateProfile></UpdateProfile>
           </PrivateRoute>
         ),
       },

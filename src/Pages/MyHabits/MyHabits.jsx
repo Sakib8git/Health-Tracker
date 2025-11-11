@@ -54,6 +54,10 @@ const MyHabits = () => {
     });
   };
 
+
+
+  
+
   return (
     <div className="min-h-screen px-4 sm:px-6 lg:px-8 py-12">
       <AnimatedBackground src="https://lottie.host/74df5d92-1d3d-4988-89ab-a4e2781f6fef/ljHYmPbE7e.lottie" />

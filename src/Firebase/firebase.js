@@ -5,13 +5,13 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyDH63njWbyCJxt49CERFXxZiJWIKCyrbao",
-  authDomain: "health-tracker-d7907.firebaseapp.com",
-  projectId: "health-tracker-d7907",
-  storageBucket: "health-tracker-d7907.firebasestorage.app",
-  messagingSenderId: "890812351359",
-  appId: "1:890812351359:web:011cadf3c36fe59742d04a",
+export const firebaseConfig = {
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // Initialize Firebase

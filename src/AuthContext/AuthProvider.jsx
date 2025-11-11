@@ -14,7 +14,7 @@ import {
 import { auth } from "../Firebase/firebase";
 
 const AuthProvider = ({ children }) => {
-  const [user, setUSer] = useState();
+  const [user, setUSer] = useState(null);
   const [loading, setLoading] = useState(true);
   // ----------------------------------------
   // registration-----------
