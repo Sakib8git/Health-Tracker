@@ -2,13 +2,14 @@ import React from "react";
 import HeroSlider from "../../Components/Banner/HeroSlider";
 import HabbitCard from "../../Components/Cards/HabbitCard";
 import WhyBuildHabits from "../../Components/BenifitCard/WhyBuildHabits";
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 
 import Feedback from "../../Components/DailyJournal/Feedback ";
 import GoalTracker from "../../Components/TopFeedback/TopFeedback";
+import { ScrollFadeUp } from "../../Components/AnimatedBackground/ScrollFadeUp";
 
 const Home = () => {
-  const data = useLoaderData()
+  const data = useLoaderData();
   return (
     <div>
       <div>
@@ -16,9 +17,19 @@ const Home = () => {
       </div>
       <div>
         <h2 className="text-3xl font-bold text-center text-gray-800 pt-20 ">
-        Featured Habits
-      </h2>
-        <HabbitCard habits={data} ></HabbitCard>
+          Featured Habits
+        </h2>
+        <ScrollFadeUp>
+          <HabbitCard habits={data}></HabbitCard>
+          <div className="text-center mt-4">
+            {/* <Link
+              to="/browse"
+              className="btn btn-lg bg-green-500 text-white hover:bg-green-600 rounded-full px-4 py-2"
+            >
+              All Habits
+            </Link> */}
+          </div>
+        </ScrollFadeUp>
       </div>
       <div>
         <WhyBuildHabits></WhyBuildHabits>

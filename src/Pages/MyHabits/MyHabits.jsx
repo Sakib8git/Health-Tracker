@@ -54,9 +54,13 @@ const MyHabits = () => {
     });
   };
 
+  //
+  const [completed, setCompleted] = useState(false);
 
-
-  
+  const handleClick = () => {
+    Swal.fire("✅ Completed!", "Habit marked as complete.", "success");
+    setCompleted(true);
+  };
 
   return (
     <div className="min-h-screen px-4 sm:px-6 lg:px-8 py-12">
@@ -105,7 +109,10 @@ const MyHabits = () => {
                         Delete
                       </button>
 
-                      <button className="btn btn-sm bg-green-500 text-white hover:bg-green-600 rounded-full">
+                      <button
+                        onClick={handleClick}
+                        className="btn btn-sm bg-green-500 text-white hover:bg-green-600 rounded-full"
+                      >
                         Mark Complete
                       </button>
                     </td>
