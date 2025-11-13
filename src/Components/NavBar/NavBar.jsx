@@ -63,7 +63,7 @@ const NavBar = () => {
             </ul>
           </div>
 
-          <Link to="/" className="text-2xl text-green-700 font-bold">
+          <Link to="/" className="text-3xl logo-font text-green-900 font-bold">
             Habit-Tracker
           </Link>
         </div>

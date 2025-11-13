@@ -38,10 +38,15 @@ const HabitDetails = () => {
       `https://habit-tracker-server-teal.vercel.app/habits/${id}/complete`,
       {
         method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${user.accessToken}`,
+        },
       }
     )
       .then((res) => res.json())
       .then((data) => {
+        // console.log(data);
         if (data.success) {
           const today = new Date().toISOString();
           setHabit((prev) => ({
@@ -73,10 +78,10 @@ const HabitDetails = () => {
     category,
     currentStreak,
     completionHistory,
-     user: creator,
+    user: creator,
     createdAt,
   } = habit;
-console.log(habit);
+  console.log(habit);
   const completedDays = completionHistory?.length || 0;
   const progressPercent = Math.min((completedDays / 30) * 100, 100).toFixed(0);
   const today = new Date().toISOString().split("T")[0];
@@ -97,13 +102,11 @@ console.log(habit);
         </span>
         <p className="text-gray-700 mb-4">{description}</p>
 
-        {/* Progress */}
         <div className="mb-4 text-left">
           <label className="text-sm font-medium text-gray-600">
             Progress: {completedDays}/30 days completed
           </label>
           <div className="habit-progress-bar">
-            {/* % er opor base kore barabe */}
             <div
               className="habit-progress-fill"
               style={{ width: `${progressPercent}%` }}
@@ -112,14 +115,13 @@ console.log(habit);
           <p className="text-sm text-gray-500 mt-1">(Last 30 Days)</p>
         </div>
 
-        {/* Streak Badge */}
+        {/* Streak */}
         <div className="mb-4">
           <div className="habit-streak-badge">
             🔥 {currentStreak}-Day Streak
           </div>
         </div>
 
-        {/* Creator Info */}
         <div className="flex items-center gap-3 mb-6">
           <img
             src={user?.photoURL || "https://i.pravatar.cc/100?img=12"}
@@ -136,7 +138,6 @@ console.log(habit);
           </div>
         </div>
 
-        {/* Mark Complete Button */}
         <button
           className="btn bg-purple-600 text-white hover:bg-purple-700 w-full disabled:opacity-50"
           onClick={handleMarkComplete}

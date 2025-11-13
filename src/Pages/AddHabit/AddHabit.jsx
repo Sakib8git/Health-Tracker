@@ -63,7 +63,7 @@ const AddHabit = () => {
   return (
     <div className="relative min-h-screen overflow-hidden flex items-center justify-center px-4 py-10">
       <title> Habit-Tracker: Add-Habits</title>
-      {/* animation */}
+      {/* anim */}
       <AddAnimation
         src="https://lottie.host/25c6467c-9e17-4bf7-82ef-07cc13eb97e4/Tq3sxNL4yN.lottie"
         style={{
@@ -85,7 +85,7 @@ const AddHabit = () => {
                 Add New Habit
               </h2>
               <form onSubmit={handleSubmit} className="space-y-4">
-                {/* habit titl */}
+                
                 <div>
                   <label className="label font-medium">Habit Title</label>
                   <input

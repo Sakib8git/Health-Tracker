@@ -72,7 +72,7 @@ const MyHabits = () => {
           method: "PATCH",
           headers: {
             "Content-Type": "application/json",
-            Authorization: `Bearer ${user.accessToken}`, // ✅ Capital A
+            authorization: `Bearer ${user.accessToken}`, 
           },
         }
       );

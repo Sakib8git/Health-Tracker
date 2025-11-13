@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Logo + Website Name */}
         <div>
-          <h2 className="text-2xl font-bold text-green-700 mb-2">
+          <h2 className="text-3xl font-bold logo-font text-green-900 mb-2">
             Habit-Tracker
           </h2>
           <p className="text-sm text-gray-600">
@@ -19,7 +19,7 @@ const Footer = () => {
           </p>
         </div>
 
-        {/* Contact Details */}
+        {/* Contat detil */}
         <div>
           <h3 className="text-lg font-semibold mb-4">Contact</h3>
           <ul className="space-y-2 text-sm">
@@ -68,25 +68,25 @@ const Footer = () => {
       <div className="mt-10 mb-5 flex flex-col md:flex-row items-center justify-center text-sm text-gray-500">
         <div className="flex gap-4 mb-4 md:mb-0">
           <a
-            href="#"
+            href="https://www.facebook.com/"
             className="bg-green-600 text-white p-2 rounded-full hover:bg-green-700"
           >
             <FaFacebookF />
           </a>
           <a
-            href="#"
+            href="https://x.com/i/flow/login"
             className="bg-green-600 text-white p-2 rounded-full hover:bg-green-700"
           >
             <FaXTwitter />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/"
             className="bg-green-600 text-white p-2 rounded-full hover:bg-green-700"
           >
             <FaInstagram />
           </a>
           <a
-            href="#"
+            href="https://mail.google.com/mail/u/0/#inbox"
             className="bg-green-600 text-white p-2 rounded-full hover:bg-green-700"
           >
             <FaEnvelope />

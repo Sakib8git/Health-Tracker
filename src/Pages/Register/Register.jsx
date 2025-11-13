@@ -61,7 +61,6 @@ const Register = () => {
     try {
       const res = await createWithEmail(email, password);
 
-      // ✅ Show success toast
       toast.success("✅ Registration successful! Please login to continue.");
 
       if (typeof updateUserProfile === "function") {
@@ -73,7 +72,6 @@ const Register = () => {
         }
       }
 
-      // ✅ Force logout so navbar doesn't show user until manual login
       if (typeof logOut === "function") {
         await logOut();
       }

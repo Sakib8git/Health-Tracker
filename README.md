@@ -1,4 +1,4 @@
-## 🧠 HabitTracker
+## HabitTracker
 
 **Live Site:** [Live site main](https://habit-tracket.netlify.app/)
 **Live Site:** [Live site BackUp](https://habit-tracker-d2m.pages.dev/)
@@ -6,7 +6,6 @@
 Helping you build better habits with the right tools and support.
 Create, track, and manage daily habits to build streaks and boost productivity.
 
----
 
 ### Features
 
@@ -16,7 +15,6 @@ Create, track, and manage daily habits to build streaks and boost productivity.
 - **Habit Management**: Create, update, and delete habits with category tagging and image support.
 - **User-Specific Data Filtering**: Only the logged-in user's habits are shown, ensuring privacy and personalization.
 
----
 
 ### Tech Stack
 
