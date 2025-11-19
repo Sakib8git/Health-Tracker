@@ -1,67 +1,94 @@
-## HabitTracker
+# 🧠 HabitTracker
 
-**Live Site:** [Live site main](https://habit-tracket.netlify.app/)
-**Live Site:** [Live site BackUp](https://habit-tracker-d2m.pages.dev/)
-
-Helping you build better habits with the right tools and support.
+Helping you build better habits with the right tools and support.  
 Create, track, and manage daily habits to build streaks and boost productivity.
 
+---
 
-### Features
+## 📌 Live Site
 
-- **User Authentication**: Secure login and registration using email/password and Google OAuth.
-- **Daily Habit Completion**: Mark habits as complete each day and build streaks with visual feedback.
-- **Progress Visualization**: Dynamic progress bars and streak badges to motivate consistent behavior.
-- **Habit Management**: Create, update, and delete habits with category tagging and image support.
-- **User-Specific Data Filtering**: Only the logged-in user's habits are shown, ensuring privacy and personalization.
+- 🔗 [Main Site](https://habit-tracket.netlify.app/)  
+- 🔗 [Backup Site](https://habit-tracker-d2m.pages.dev/)
 
-
-### Tech Stack
-
-- **Frontend**: React, TailwindCSS, Styled Components, React Router,Lottie React,Framer Motion,
-- **Backend**: Express.js, MongoDB, CORS
-- **Auth**: Firebase Authentication
-- **Hosting**:Vercel (Server), Netlify (Client), Cloudflare(BackUp clint)
+---
 
 
-### Project Dependencies 
-🔹 Frontend Dependencies
-• 	React – UI rendering and component-based architecture
-• 	React Router DOM – Client-side routing
-• 	Axios – API calls to backend
-• 	Tailwind CSS – Utility-first CSS framework
-• 	React Icons – Icon library for UI elements
-• 	Framer Motion – Animation and transitions
-• 	React Toastify – Toast notifications
-• 	Date-fns – Date formatting and manipulation
+## 📄 About the Project
 
-🔹 Backend Dependencies
-• 	Express.js – Server-side framework
-• 	MongoDB – NoSQL database
-• 	Mongoose – MongoDB object modeling
-• 	Cors – Cross-origin resource sharing
-• 	Dotenv – Environment variable management
-• 	Body-parser – Parsing incoming request bodies
-• 	Nodemon – Development-time server auto-restart
+HabitTracker is a full-stack habit tracking application designed to help users build and maintain daily routines. It provides secure authentication, personalized habit management, and visual progress tracking to boost productivity and consistency.
 
-🔹 Dev Tools & Scripts
-• 	Netlify – Frontend deployment
-• 	Postman – API testing
-• 	VS Code – Development environment
+---
 
-### Habit Tracker project on your local machine
+## 🧩 Project Overview
 
-1. Clone the Repository
+This project empowers users to create custom habits, track daily completion, and visualize progress through streaks and badges. Built with React and Express, it ensures fast performance, responsive design, and secure data handling.
+
+<img width="1411" height="907" alt="image" src="https://github.com/user-attachments/assets/0b2e56c8-cfa5-4ab1-9e90-bc73a9e75ef9" />
+
+
+---
+
+## 🚀 Key Features
+
+- 🔐 **User Authentication** – Email/password and Google OAuth login  
+- ✅ **Daily Habit Completion** – Mark habits complete and build streaks  
+- 📊 **Progress Visualization** – Dynamic progress bars and badges  
+- 📝 **Habit Management** – Create, update, and delete with category and image  
+- 🔎 **User-Specific Filtering** – Only logged-in users' habits are shown
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend:** React · Tailwind CSS · Styled Components · React Router · Lottie · Framer Motion  
+**Backend:** Node.js · Express.js · MongoDB · CORS  
+**Auth:** Firebase Authentication  
+**Hosting:** Vercel (Server) · Netlify (Client) · Cloudflare (Backup Client)
+
+---
+
+## 📦 Dependencies
+
+```json
+{
+  "react": "^18.x",
+  "react-router-dom": "^6.x",
+  "axios": "^1.x",
+  "tailwindcss": "^3.x",
+  "styled-components": "^6.x",
+  "framer-motion": "^10.x",
+  "react-toastify": "^9.x",
+  "date-fns": "^2.x",
+  "firebase": "^10.x",
+  "express": "^4.x",
+  "mongoose": "^7.x",
+  "cors": "^2.x",
+  "dotenv": "^16.x",
+  "body-parser": "^1.x",
+  "nodemon": "^3.x"
+}
+
+```
+## Installation️ & Setup
+1. Clone the repo and install dependencies:
+
+```bash
 git clone https://github.com/Sakib8git/habit-tracker.git
-cd habit-tracker
+npm install
+```
+2. Set up environment variables by creating a `.env` file in the root directory:
 
-2. Install Dependencies
-### 🔹 Frontend
-• Run `npm install`  
-• Start with `npm start`
+```env
+DATABASE_URL=your_database_url
+JWT_SECRET=your_jwt_secret
+```
+
+3. Run the application:
+
+```bash
+npm run dev
+```
+## Contact
 
 
-2. Install Dependencies
-### 🔹 Backend
-• Run `npm install`  
-• Start with `npm run dev`
+**Email:** [Sakib](sakib30278@gmail.com)
