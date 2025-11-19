@@ -50,23 +50,33 @@ This project empowers users to create custom habits, track daily completion, and
 ## 📦 Dependencies
 
 ```json
-{
-  "react": "^18.x",
-  "react-router-dom": "^6.x",
-  "axios": "^1.x",
-  "tailwindcss": "^3.x",
-  "styled-components": "^6.x",
-  "framer-motion": "^10.x",
-  "react-toastify": "^9.x",
-  "date-fns": "^2.x",
-  "firebase": "^10.x",
-  "express": "^4.x",
-  "mongoose": "^7.x",
-  "cors": "^2.x",
-  "dotenv": "^16.x",
-  "body-parser": "^1.x",
-  "nodemon": "^3.x"
-}
+ "dependencies": {
+    "@lottiefiles/dotlottie-react": "^0.17.7",
+    "@tailwindcss/vite": "^4.1.17",
+    "firebase": "^12.5.0",
+    "framer-motion": "^12.23.24",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-icons": "^5.5.0",
+    "react-router": "^7.9.5",
+    "react-toastify": "^11.0.5",
+    "styled-components": "^6.1.19",
+    "sweetalert2": "^11.26.3",
+    "swiper": "^12.0.3",
+    "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.4",
+    "daisyui": "^5.4.7",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "globals": "^16.4.0",
+    "vite": "^7.1.7"
+  }
 
 ```
 ## Installation️ & Setup
