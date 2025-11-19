@@ -56,12 +56,12 @@ git clone https://github.com/Sakib8git/habit-tracker.git
 cd habit-tracker
 
 2. Install Dependencies
-🔹Frontend
-* npm install
-run: npm run dev
+### 🔹 Frontend
+• Run `npm install`  
+• Start with `npm start`
 
 
 2. Install Dependencies
-🔹Backend  
-* npm install
-run: nodemon index.js
+### 🔹 Backend
+• Run `npm install`  
+• Start with `npm run dev`
