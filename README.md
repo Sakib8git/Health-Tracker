@@ -22,3 +22,46 @@ Create, track, and manage daily habits to build streaks and boost productivity.
 - **Backend**: Express.js, MongoDB, CORS
 - **Auth**: Firebase Authentication
 - **Hosting**:Vercel (Server), Netlify (Client), Cloudflare(BackUp clint)
+
+
+### Project Dependencies 
+🔹 Frontend Dependencies
+• 	React – UI rendering and component-based architecture
+• 	React Router DOM – Client-side routing
+• 	Axios – API calls to backend
+• 	Tailwind CSS – Utility-first CSS framework
+• 	React Icons – Icon library for UI elements
+• 	Framer Motion – Animation and transitions
+• 	React Toastify – Toast notifications
+• 	Date-fns – Date formatting and manipulation
+
+🔹 Backend Dependencies
+• 	Express.js – Server-side framework
+• 	MongoDB – NoSQL database
+• 	Mongoose – MongoDB object modeling
+• 	Cors – Cross-origin resource sharing
+• 	Dotenv – Environment variable management
+• 	Body-parser – Parsing incoming request bodies
+• 	Nodemon – Development-time server auto-restart
+
+🔹 Dev Tools & Scripts
+• 	Netlify – Frontend deployment
+• 	Postman – API testing
+• 	VS Code – Development environment
+
+### Habit Tracker project on your local machine
+
+1. Clone the Repository
+git clone https://github.com/Sakib8git/habit-tracker.git
+cd habit-tracker
+
+2. Install Dependencies
+🔹Frontend
+* npm install
+run: npm run dev
+
+
+2. Install Dependencies
+🔹Backend  
+* npm install
+run: nodemon index.js
