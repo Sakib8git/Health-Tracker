@@ -15,7 +15,7 @@ Create, track, and manage daily habits to build streaks and boost productivity.
 
 ## 📄 About the Project
 
-HabitTracker is a full-stack habit tracking application designed to help users build and maintain daily routines. It provides secure authentication, personalized habit management, and visual progress tracking to boost productivity and consistency.
+HabitTracker is a habit tracking application designed to help users build and maintain daily routines. It provides secure authentication, personalized habit management, and visual progress tracking to boost productivity and consistency.
 
 ---
 
